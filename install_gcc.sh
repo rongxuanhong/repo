@@ -16,6 +16,7 @@ fi
 if [ ! -d 'gmp' ];then
 	wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gmp/gmp-6.1.0.tar.xz
 	xz -d gmp-6.1.0.tar.xz && tar -xvf gmp-6.1.0.tar && mv gmp-6.1.0 gmp && rm -f gmp-6.1.0.tar
+fi
 
 mkdir -p gcc-build 
 cd 'gcc-build'
