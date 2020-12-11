@@ -1,5 +1,8 @@
 #! /bin/bash
 #git clone https://github.com/gcc-mirror/gcc.git
+
+apt-get install -y gcc make libncurses5-dev openssl libssl-dev build-essential pkg-config libc6-dev bison flex libelf-dev
+
 GCC_PATH='/home/hrx/gcc-9.3.0'
 cd $GCC_PATH
 
