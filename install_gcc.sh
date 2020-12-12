@@ -3,7 +3,7 @@
 
 apt-get install -y gcc make libncurses5-dev openssl libssl-dev build-essential pkg-config libc6-dev bison flex libelf-dev
 
-GCC_PATH='/home/hrx/gcc-9.3.0'
+GCC_PATH='/home/hrx/gcc-6.1.0'
 cd $GCC_PATH
 
 if [ ! -d 'mpfr' ];then
@@ -24,7 +24,7 @@ fi
 mkdir -p gcc-build 
 cd 'gcc-build'
 
-INTSTALL_PATH='/home/hrx/gcc9'
+INTSTALL_PATH='/home/hrx/gcc6'
 
 ../configure --prefix=${INTSTALL_PATH} --enable-shared --enable-threads=posix --enable-checking=yes -with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,fortran,lto --enable-plugin --enable-initfini-array --disable-libgcj --without-isl --without-cloog --enable-gnu-indirect-function --with-stage1-ldflags=' -Wl,-z,relro,-z,now' --with-boot-ldflags=' -Wl,-z,relro,-z,now' --disable-multilib
 
