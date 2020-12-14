@@ -14,3 +14,5 @@ hrx_help(){
 sudo apt-add-repository -yu 'deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu xenial main'
 sudo apt update
 sudo apt-get install gcc-4.9 g++-4.9 gcc-4.9-multilib
+
+https://github.com/andikleen/linux-misc/archive/lto-3.8.zip
