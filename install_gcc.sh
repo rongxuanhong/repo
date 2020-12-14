@@ -9,8 +9,8 @@ GCC_VERSION=gcc-4.9.0
 #    wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.gz && tar -zxvf $GCC_VERSION.tar.gz
 #fi
 #tar -zxvf '$GCC_VERSION.tar.gz'
-#GCC_PATH='$HOME/$GCC_VERSION'
-#cd $GCC_PATH
+GCC_PATH='$HOME/$GCC_VERSION'
+cd $GCC_PATH
 
 GMP=gmp-4.3.2
 MPC=mpc-1.0.1
