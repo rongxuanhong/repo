@@ -3,30 +3,35 @@
 
 apt-get install -y gcc make libncurses5-dev openssl libssl-dev build-essential pkg-config libc6-dev bison flex libelf-dev
 
-GCC_PATH='/home/hrx/gcc-6.1.0'
+GCC_PATH='/home/hrx/gcc-4.9.0'
 cd $GCC_PATH
 
+GMP=gmp-4.3.2
+MPC=mpc-0.8.1
+MPFR=mpfr-2.4.2
+
 if [ ! -d 'mpfr' ];then
-	wget https://mirrors.tuna.tsinghua.edu.cn/gnu/mpfr/mpfr-4.0.2.tar.gz
-	tar -zxvf mpfr-4.0.2.tar.gz && mv mpfr-4.0.2 mpfr && rm -f mpfr-4.0.2.tar.gz
+	wget https://mirrors.tuna.tsinghua.edu.cn/gnu/mpfr/$MPFR.tar.gz
+	tar -zxvf $MPFR.tar.gz && mv $MPFR mpfr && rm -f $MPFR.tar.gz
 fi
 
 if [ ! -d 'mpc' ];then
-	wget https://mirrors.tuna.tsinghua.edu.cn/gnu/mpc/mpc-1.1.0.tar.gz
-	tar -zxvf mpc-1.1.0.tar.gz && mv mpc-1.1.0 mpc && rm -f mpc-1.1.0.tar.gz
+	wget https://mirrors.tuna.tsinghua.edu.cn/gnu/mpc/$MPC.tar.gz
+	tar -zxvf $MPC.tar.gz && mv $MPC mpc && rm -f $MPC.tar.gz
 fi
 
 if [ ! -d 'gmp' ];then
-	wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gmp/gmp-6.1.0.tar.xz
-	xz -d gmp-6.1.0.tar.xz && tar -xvf gmp-6.1.0.tar && mv gmp-6.1.0 gmp && rm -f gmp-6.1.0.tar
+	wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gmp/$GMP.tar.xz
+	xz -d $GMP.tar.xz && tar -xvf $GMP.tar && mv $GMP gmp && rm -f $GMP.tar
 fi
 
 mkdir -p gcc-build 
 cd 'gcc-build'
 
-INTSTALL_PATH='/home/hrx/gcc6'
+INTSTALL_PATH='$GCC_PATH/gcc-build/gcc'
+mkdir -p $INSTALL_PATH
 
-../configure --prefix=${INTSTALL_PATH} --enable-shared --enable-threads=posix --enable-checking=yes -with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,fortran,lto --enable-plugin --enable-initfini-array --disable-libgcj --without-isl --without-cloog --enable-gnu-indirect-function --with-stage1-ldflags=' -Wl,-z,relro,-z,now' --with-boot-ldflags=' -Wl,-z,relro,-z,now' --disable-multilib
+../configure --prefix=${INTSTALL_PATH} --enable-checking=yes -with-system-zlib --enable-shared  --enable-languages=c,c++,objc,obj-c++,fortran,lto --disable-werror --disable-bootstrap --disable-multilib
 
 make -j$(getconf _NPROCESSORS_ONLN)
 
