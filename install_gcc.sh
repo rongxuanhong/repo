@@ -3,7 +3,12 @@
 
 apt-get install -y gcc make libncurses5-dev openssl libssl-dev build-essential pkg-config libc6-dev bison flex libelf-dev
 
-GCC_PATH='/home/hrx/gcc-4.9.0'
+cd $HOME
+GCC_VERSION=gcc-4.9.0
+if [ ! -d $GCC_VERSION.tar.gz ];then
+    wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.gz && tar -zxvf $GCC_VERSION.tar.gz
+fi
+GCC_PATH='$HOME/$GCC_VERSION'
 cd $GCC_PATH
 
 GMP=gmp-4.3.2
