@@ -2,7 +2,7 @@
 #git clone https://github.com/gcc-mirror/gcc.git
 
 apt-get install -y gcc make libncurses5-dev openssl libssl-dev build-essential pkg-config libc6-dev bison flex libelf-dev
-
+HOME=/home/hrx
 cd $HOME
 GCC_VERSION=gcc-4.9.0
 #if [ ! -d $GCC_VERSION.tar.gz ];then
