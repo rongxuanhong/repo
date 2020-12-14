@@ -7,7 +7,7 @@ GCC_PATH='/home/hrx/gcc-4.9.0'
 cd $GCC_PATH
 
 GMP=gmp-4.3.2
-MPC=mpc-0.8.1
+MPC=mpc-1.0.1
 MPFR=mpfr-2.4.2
 
 if [ ! -d 'mpfr' ];then
@@ -21,8 +21,8 @@ if [ ! -d 'mpc' ];then
 fi
 
 if [ ! -d 'gmp' ];then
-	wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gmp/$GMP.tar.xz
-	xz -d $GMP.tar.xz && tar -xvf $GMP.tar && mv $GMP gmp && rm -f $GMP.tar
+	wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gmp/$GMP.tar.bz2
+	tar -jxvf $GMP.tar.bz2 && mv $GMP gmp && rm -f $GMP.tar
 fi
 
 mkdir -p gcc-build 
