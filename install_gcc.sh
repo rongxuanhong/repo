@@ -5,9 +5,10 @@ apt-get install -y gcc make libncurses5-dev openssl libssl-dev build-essential p
 
 cd $HOME
 GCC_VERSION=gcc-4.9.0
-if [ ! -d $GCC_VERSION.tar.gz ];then
-    wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.gz && tar -zxvf $GCC_VERSION.tar.gz
-fi
+#if [ ! -d $GCC_VERSION.tar.gz ];then
+#    wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.gz && tar -zxvf $GCC_VERSION.tar.gz
+#fi
+tar -zxvf '$GCC_VERSION.tar.gz'
 GCC_PATH='$HOME/$GCC_VERSION'
 cd $GCC_PATH
 
