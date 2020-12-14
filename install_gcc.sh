@@ -8,9 +8,9 @@ GCC_VERSION=gcc-4.9.0
 #if [ ! -d $GCC_VERSION.tar.gz ];then
 #    wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.gz && tar -zxvf $GCC_VERSION.tar.gz
 #fi
-tar -zxvf '$GCC_VERSION.tar.gz'
-GCC_PATH='$HOME/$GCC_VERSION'
-cd $GCC_PATH
+#tar -zxvf '$GCC_VERSION.tar.gz'
+#GCC_PATH='$HOME/$GCC_VERSION'
+#cd $GCC_PATH
 
 GMP=gmp-4.3.2
 MPC=mpc-1.0.1
@@ -37,7 +37,7 @@ cd 'gcc-build'
 INTSTALL_PATH='$GCC_PATH/gcc-build/gcc'
 mkdir -p $INSTALL_PATH
 
-../configure --prefix=${INTSTALL_PATH} --enable-checking=yes -with-system-zlib --enable-shared  --enable-languages=c,c++,objc,obj-c++,fortran,lto --disable-werror --disable-bootstrap --disable-multilib
+$GCC_PATH/configure --prefix=${INTSTALL_PATH} --enable-checking=yes -with-system-zlib --enable-shared  --enable-languages=c,c++,objc,obj-c++,fortran,lto --disable-werror --disable-bootstrap --disable-multilib
 
 make -j$(getconf _NPROCESSORS_ONLN)
 
