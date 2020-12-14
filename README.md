@@ -16,3 +16,5 @@ sudo apt update
 sudo apt-get install gcc-4.9 g++-4.9 gcc-4.9-multilib
 
 https://github.com/andikleen/linux-misc/archive/lto-3.8.zip
+
+./source/scripts/config --disable function_tracer --disable function_graph_tracer --disable stack_tracer --enable lto_menu --disable lto_disable --disable lto_debug --disable lto_slim
