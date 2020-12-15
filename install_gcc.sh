@@ -34,7 +34,7 @@ if [ ! -d "gmp" ];then
 fi
 
 mkdir -p gcc-build 
-cd "gcc-build"hrx
+cd "gcc-build"
 
 INTSTALL_PATH=$HOME/gcc/build-gcc-${GCC_VERSION}
 mkdir -p $INSTALL_PATH
