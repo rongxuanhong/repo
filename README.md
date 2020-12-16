@@ -19,3 +19,5 @@ https://github.com/andikleen/linux-misc/archive/lto-3.8.zip
 
 ./source/scripts/config --disable function_tracer --disable function_graph_tracer --disable stack_tracer --enable lto_menu --disable lto_disable --disable lto_debug --disable lto_slim
 https://mirrors.tuna.tsinghua.edu.cn/gnu/binutils/binutils-2.27.tar.gz
+
+https://mirrors.edge.kernel.org/pub/linux/devel/binutils/binutils-2.23.51.0.9.tar.gz
