@@ -5,7 +5,7 @@ apt-get install -y gcc make libncurses5-dev openssl libssl-dev build-essential p
 HOME=/home/hrx
 cd $HOME
 
-GCC_VERSION=gcc-4.7.2
+GCC_VERSION=gcc-4.8.5
 GMP=gmp-4.3.2
 MPC=mpc-1.0.1
 MPFR=mpfr-2.4.2
@@ -39,12 +39,12 @@ cd "gcc-build"
 INTSTALL_PATH=$HOME/gcc/build-gcc-${GCC_VERSION}
 mkdir -p $INSTALL_PATH
 
-#$GCC_PATH/configure --prefix=${INTSTALL_PATH} --enable-checking=yes --disable-nls -disable-libstdcxx-pch --enable-shared  --enable-lto --enable-languages=c,c++ --disable-werror --disable-bootstrap --disable-multilib
-$GCC_PATH/configure --prefix=${INTSTALL_PATH} --with-plugin-ld=/usr/local/bin/ld-plugin --disable-nls -disable-libstdcxx-pch --enable-lto --enable-languages=c,c++ --disable-werror --disable-bootstrap --disable-multilib
+$GCC_PATH/configure --prefix=${INTSTALL_PATH} --enable-checking=yes --disable-nls -disable-libstdcxx-pch --enable-shared  --enable-lto --enable-languages=c,c++ --disable-werror --disable-bootstrap --disable-multilib
+#$GCC_PATH/configure --prefix=${INTSTALL_PATH} --disable-nls -disable-libstdcxx-pch --enable-lto --enable-languages=c,c++ --disable-werror --disable-bootstrap --disable-multilib
 
 make -j$(getconf _NPROCESSORS_ONLN)
 
 make install
 
-#echo "export PATH=${INTSTALL_PATH}/bin:\$PATH" >> ~/.bashrc
-#source ~/.bashrc
+echo "export PATH=${INTSTALL_PATH}/bin:\$PATH" >> ~/.bashrc
+source ~/.bashrc
