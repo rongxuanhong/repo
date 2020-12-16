@@ -30,7 +30,7 @@ fi
 
 if [ ! -d "gmp" ];then
 	wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gmp/$GMP.tar.bz2
-	tar -jxvf $GMP.tar.bz2 && mv $GMP gmp && rm -f $GMP.tar
+	tar -jxvf $GMP.tar.bz2 && mv $GMP gmp && rm -f $GMP.tar.bz2
 fi
 
 mkdir -p gcc-build 
