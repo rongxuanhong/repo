@@ -21,3 +21,10 @@ https://github.com/andikleen/linux-misc/archive/lto-3.8.zip
 https://mirrors.tuna.tsinghua.edu.cn/gnu/binutils/binutils-2.27.tar.gz
 
 https://mirrors.edge.kernel.org/pub/linux/devel/binutils/binutils-2.23.51.0.9.tar.gz
+
+wget http://ftp.gnu.org/gnu/texinfo/texinfo-4.13a.tar.gz
+tar -zxvf texinfo-4.13a.tar.gz
+cd texinfo-4.13
+./configure
+make
+sudo make install
