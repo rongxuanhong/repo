@@ -39,11 +39,12 @@ cd "gcc-build"
 INTSTALL_PATH=$HOME/gcc/build-gcc-${GCC_VERSION}
 mkdir -p $INSTALL_PATH
 
-$GCC_PATH/configure --prefix=${INTSTALL_PATH} --enable-checking=yes --disable-nls -disable-libstdcxx-pch --enable-shared  --enable-lto --enable-languages=c,c++ --disable-werror --disable-bootstrap --disable-multilib
+#$GCC_PATH/configure --prefix=${INTSTALL_PATH} --enable-checking=yes --disable-nls -disable-libstdcxx-pch --enable-shared  --enable-lto --enable-languages=c,c++ --disable-werror --disable-bootstrap --disable-multilib
+$GCC_PATH/configure --prefix=${INTSTALL_PATH} --with-plugin-ld=/usr/local/bin/ld-plugin --disable-nls -disable-libstdcxx-pch --enable-lto --enable-languages=c,c++ --disable-werror --disable-bootstrap --disable-multilib
 
 make -j$(getconf _NPROCESSORS_ONLN)
 
-make install -j$(getconf _NPROCESSORS_ONLN)
+make install-no-fixedincludes
 
-echo "export PATH=${INTSTALL_PATH}/bin:\$PATH" >> ~/.bashrc
-source ~/.bashrc
+#echo "export PATH=${INTSTALL_PATH}/bin:\$PATH" >> ~/.bashrc
+#source ~/.bashrc
