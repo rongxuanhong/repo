@@ -10,9 +10,9 @@ GMP=gmp-4.3.2
 MPC=mpc-1.0.1
 MPFR=mpfr-2.4.2
 
-if [ ! -f $GCC_VERSION.tar.gz ];then
-    wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.gz && tar -zxvf $GCC_VERSION.tar.gz
-fi
+#if [ ! -f $GCC_VERSION.tar.gz ];then
+    #wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.gz && tar -zxvf $GCC_VERSION.tar.gz
+#fi
 
 GCC_PATH=$HOME/$GCC_VERSION
 cd $GCC_PATH
