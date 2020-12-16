@@ -5,7 +5,7 @@ apt-get install -y gcc make libncurses5-dev openssl libssl-dev build-essential p
 HOME=/home/hrx
 cd $HOME
 
-GCC_VERSION=gcc-4.8.5
+GCC_VERSION=gcc-4.7.2
 GMP=gmp-4.3.2
 MPC=mpc-1.0.1
 MPFR=mpfr-2.4.2
