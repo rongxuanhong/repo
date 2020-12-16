@@ -44,7 +44,7 @@ $GCC_PATH/configure --prefix=${INTSTALL_PATH} --with-plugin-ld=/usr/local/bin/ld
 
 make -j$(getconf _NPROCESSORS_ONLN)
 
-make install-no-fixedincludes
+make install
 
 #echo "export PATH=${INTSTALL_PATH}/bin:\$PATH" >> ~/.bashrc
 #source ~/.bashrc
