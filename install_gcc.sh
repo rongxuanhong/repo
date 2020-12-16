@@ -40,7 +40,7 @@ INTSTALL_PATH=$HOME/gcc/build-gcc-${GCC_VERSION}
 mkdir -p $INSTALL_PATH
 
 #$GCC_PATH/configure --prefix=${INTSTALL_PATH} --enable-checking=yes --disable-nls --disable-libstdcxx-pch --enable-shared  --enable-lto --enable-languages=c,c++ --disable-werror --disable-bootstrap --disable-multilib
-$GCC_PATH/configure --prefix=${INTSTALL_PATH} --with-plugin-ld=/usr/local/bin/ld-plugin --enable-lto --enable-languages=c,c++ --disable-werror --disable-bootstrap --disable-multilib
+$GCC_PATH/configure --prefix=${INTSTALL_PATH} --with-plugin-ld=/usr/local/bin/ld-plugin --enable-checking=yes --enable-shared  --enable-lto --enable-languages=c,c++ --disable-werror --disable-bootstrap --disable-multilib
 
 make -j$(getconf _NPROCESSORS_ONLN)
 
