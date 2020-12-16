@@ -8,8 +8,8 @@ cd $HOME
 GCC_VERSION=gcc-7.4.0
 GMP=gmp-4.3.2
 MPC=mpc-1.0.1
-MPFR=mpfr-2.4.2
-
+#MPFR=mpfr-2.4.2
+MPFR=mpfr-3.1.4
 #if [ ! -f $GCC_VERSION.tar.gz ];then
     #wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.gz && tar -zxvf $GCC_VERSION.tar.gz
 #fi
