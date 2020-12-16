@@ -45,5 +45,5 @@ make -j$(getconf _NPROCESSORS_ONLN)
 
 make install -j$(getconf _NPROCESSORS_ONLN)
 
-echo "export PATH=${INTSTALL_PATH}/bin:$PATH" >> ~/.bashrc
+echo "export PATH=${INTSTALL_PATH}/bin:\$PATH" >> ~/.bashrc
 source ~/.bashrc
