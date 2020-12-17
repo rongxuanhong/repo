@@ -28,3 +28,5 @@ cd texinfo-4.13
 ./configure
 make
 sudo make install
+
+https://mirrors.tuna.tsinghua.edu.cn/gnu/make/make-3.81.tar.gz
