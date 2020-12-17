@@ -30,3 +30,7 @@ make
 sudo make install
 
 https://mirrors.tuna.tsinghua.edu.cn/gnu/make/make-3.81.tar.gz
+
+./scripts/config --disable function_tracer --disable function_graph_tracer \
+			--disable stack_tracer --enable lto_menu --disable lto_disable \
+			--disable gcov --disable kallsyms_all --disable modversions
