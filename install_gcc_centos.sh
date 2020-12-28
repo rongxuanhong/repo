@@ -1,7 +1,7 @@
 #! /bin/bash -e
 #git clone https://github.com/gcc-mirror/gcc.git
 
-yum install -y gcc make gcc-c++ zlib-devel
+yum install -y gcc make gcc-c++ zlib-devel ncurses-devel flex bison openssl-devel bc
 HOME=/home/hrx
 SOURCE_BASE=https://mirrors.huaweicloud.com/gnu
 #SOURCE_BASE=https://mirrors.tuna.tsinghua.edu.cn/gnu
