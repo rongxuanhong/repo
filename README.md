@@ -34,3 +34,8 @@ https://mirrors.tuna.tsinghua.edu.cn/gnu/make/make-3.81.tar.gz
 ./scripts/config --disable function_tracer --disable function_graph_tracer \
 			--disable stack_tracer --enable lto_menu --disable lto_disable \
 			--disable gcov --disable kallsyms_all --disable modversions
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCne8eJtPUobOoJk4mLbPTYADVS/nT6sIYNjS9pfIO1kfk/M/dUWXNwS2Y0REXi/n6rThQ+r7G2x0w
+wPy0qFICVnBZ+4KT+QpMp3zO/o7hORCm/seq2wz1WBAJeAJmBaYJKdENrsyDr31vSi/rG6+cvfsuPYqC9pgtjkYE4ziOdtRt3tFuIxqaup50hFQLi/J
+T/tDS6wJOs7hMwNSLhPg4epaHe/wF9+DIJ5XfCKK5ToKQXvwOKRd0f8jfFl9P7edEu22lXZpMOVd3CNB5xuN92RfKsRyDXQ8LfsilwhzM1cg5M7Fx9X
+QlCdPYp+nE6+DgvySA4X3Yamf/Ug125Zy3v root@client1
+
