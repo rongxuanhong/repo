@@ -34,7 +34,7 @@ cd gcc-build
 mkdir install-path
 INTSTALL_PATH=$HOME/gcc/install-path
 
-$GCC_PATH/configure --prefix=${INTSTALL_PATH} --enable-languages=c,c++ 
+$GCC_PATH/configure --prefix=${INTSTALL_PATH} --enable-languages=c,c++  --libdir=/usr/lib
 
 make -j$(getconf _NPROCESSORS_ONLN)
 
