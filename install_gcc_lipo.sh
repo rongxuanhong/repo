@@ -3,7 +3,7 @@
 
 #apt-get install -y gcc make libncurses5-dev openssl libssl-dev build-essential pkg-config libc6-dev bison flex libelf-dev
 HOME=/home/hrx
-SOURCE_BASE=https://mirrors.huaweicloud.com/gnu
+SOURCE_BASE=https://mirrors.tuna.tsinghua.edu.cn/gnu
 cd $HOME
 
 GMP=gmp-4.3.2
