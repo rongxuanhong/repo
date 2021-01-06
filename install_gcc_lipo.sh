@@ -14,17 +14,17 @@ cd $GCC_PATH
 
 
 if [ ! -d "mpfr" ];then
-        wget $SOURCE_BASE/mpfr/$MPFR.tar.gz
+        wget $SOURCE_BASE/mpfr/$MPFR.tar.gz --no-check-certificate
         tar -zxvf $MPFR.tar.gz && mv $MPFR mpfr && rm -f $MPFR.tar.gz
 fi
 
 if [ ! -d "mpc" ];then
-        wget https://gcc.gnu.org/pub/gcc/infrastructure/mpc-0.8.1.tar.gz
+        wget https://gcc.gnu.org/pub/gcc/infrastructure/mpc-0.8.1.tar.gz --no-check-certificate
         tar -zxvf $MPC.tar.gz && mv $MPC mpc && rm -f $MPC.tar.gz
 fi
 
 if [ ! -d "gmp" ];then
-        wget $SOURCE_BASE/gmp/$GMP.tar.bz2
+        wget $SOURCE_BASE/gmp/$GMP.tar.bz2 --no-check-certificate
         tar -jxvf $GMP.tar.bz2 && mv $GMP gmp && rm -f $GMP.tar.bz2
 fi
 
@@ -34,7 +34,7 @@ cd gcc-build
 mkdir install-path
 INTSTALL_PATH=$HOME/gcc/install-path
 
-$GCC_PATH/configure --prefix=${INTSTALL_PATH} --enable-languages=c,c++ --build=x86_64_linux-gnu --host=x86_64_linux-gnu --target=x86_64_linux-gnu 
+$GCC_PATH/configure --prefix=${INTSTALL_PATH} --enable-languages=c,c++ 
 
 make -j$(getconf _NPROCESSORS_ONLN)
 
