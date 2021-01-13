@@ -38,7 +38,13 @@ https://mirrors.tuna.tsinghua.edu.cn/gnu/make/make-3.81.tar.gz
 https://developer.arm.com/-/media/Files/downloads/gnu-a/10.2-2020.11/binrel/gcc-arm-10.2-2020.11-aarch64-aarch64-none-elf.tar.xz?revision=9611f84a-41b8-4eae-9c30-045c830f5337&la=en&hash=109566BAD01B49B8BED6E60956DAB59ADFABAE62
 
 
+apt-get update
+apt-get install software-properties-common apt-transport-https
+apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xB4112585D386EB94
 
+add-apt-repository https://dl.hhvm.com/ubuntu
+apt-get update
+apt-get install hhvm
 
 
 
