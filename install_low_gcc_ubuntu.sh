@@ -6,7 +6,7 @@ HOME=/home/hrx
 SOURCE_BASE=https://mirrors.huaweicloud.com/gnu
 cd $HOME
 
-GCC_VERSION=gcc-4.9.4
+GCC_VERSION=gcc-5.5.0
 GMP=gmp-4.3.2
 MPC=mpc-0.8.1
 MPFR=mpfr-2.4.2
