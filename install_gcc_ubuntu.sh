@@ -40,7 +40,7 @@ mkdir -p gcc-build
 cd "gcc-build"
 
 INTSTALL_PATH=$HOME/gcc/build-${GCC_VERSION}
-mkdir -p $INSTALL_PATH
+mkdir -p $INTSTALL_PATH
 
 $GCC_PATH/configure --prefix=${INTSTALL_PATH} --enable-checking=yes --disable-nls --disable-libstdcxx-pch --enable-languages=c,c++ --disable-werror --disable-bootstrap --disable-multilib
 
