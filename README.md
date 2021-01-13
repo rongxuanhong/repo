@@ -46,6 +46,6 @@ add-apt-repository https://dl.hhvm.com/ubuntu
 apt-get update
 apt-get install hhvm
 
-
+./configure -DCMAKE_INSTALL_PREFIX=$HHVM_DIR -DCMAKE_BUILD_TYPE=RelWithDebInfo
 
 
