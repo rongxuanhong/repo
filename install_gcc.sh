@@ -1,13 +1,13 @@
 #! /bin/bash -e
 #git clone https://github.com/gcc-mirror/gcc.git
 
-yum install -y gcc make libncurses5-dev openssl libssl-dev build-essential pkg-config libc6-dev bison flex libelf-dev
+sudo apt-get install -y gcc make libncurses5-dev openssl libssl-dev build-essential pkg-config libc6-dev bison flex libelf-dev  texinfo
 HOME=/home/hrx
 #SOURCE_BASE=https://mirrors.huaweicloud.com/gnu
 SOURCE_BASE=https://mirrors.tuna.tsinghua.edu.cn/gnu
 cd $HOME
 
-GCC_VERSION=gcc-10.2.0
+GCC_VERSION=gcc-9.3.0
 GMP=gmp-6.1.0
 #GMP=gmp-4.3.2
 MPC=mpc-1.1.0
@@ -42,12 +42,12 @@ cd "gcc-build"
 INTSTALL_PATH=$HOME/gcc/build-${GCC_VERSION}
 mkdir -p $INSTALL_PATH
 
-$GCC_PATH/configure --prefix=${INTSTALL_PATH} --enable-checking=yes --disable-nls --disable-libstdcxx-pch --enable-lto --enable-languages=c,c++ --disable-werror --disable-bootstrap --disable-multilib \
-        --disable-default-pie
+$GCC_PATH/configure --prefix=${INTSTALL_PATH} --enable-checking=yes --disable-nls --disable-libstdcxx-pch --enable-languages=c,c++ --disable-werror --disable-bootstrap --disable-multilib
+
 
 make -j$(getconf _NPROCESSORS_ONLN)
 
 make install
 
-echo "export PATH=${INTSTALL_PATH}/bin:\$PATH" >> ~/.bashrc
-source ~/.bashrc
+#echo "export PATH=${INTSTALL_PATH}/bin:\$PATH" >> ~/.bashrc
+#source ~/.bashrc
