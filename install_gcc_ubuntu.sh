@@ -3,8 +3,8 @@
 
 sudo apt-get install -y gcc make libncurses5-dev openssl libssl-dev build-essential pkg-config libc6-dev bison flex libelf-dev  texinfo
 HOME=/home/hrx
-#SOURCE_BASE=https://mirrors.huaweicloud.com/gnu
-SOURCE_BASE=https://mirrors.tuna.tsinghua.edu.cn/gnu
+SOURCE_BASE=https://mirrors.huaweicloud.com/gnu
+#SOURCE_BASE=https://mirrors.tuna.tsinghua.edu.cn/gnu
 cd $HOME
 
 GCC_VERSION=gcc-9.3.0
