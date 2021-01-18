@@ -62,3 +62,6 @@ sudo ln -sf /opt/cmake-3.13.0/bin/*  /usr/bin/
 cmake --version
 
 wget https://github.com/redis/redis/archive/4.0.zip
+
+sudo echo 'vm.overcommit_memory = 1' >> /etc/sysctl.conf
+sudo sysctl -p
