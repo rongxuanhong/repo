@@ -61,4 +61,4 @@ sudo ln -sf /opt/cmake-3.13.0/bin/*  /usr/bin/
 # 查看 cmake 版本
 cmake --version
 
-wget http://snapshot.debian.org/archive/debian/20150821T213547Z/pool/main/a/apt/apt_1.0.10.2.tar.xz
+wget https://github.com/redis/redis/archive/4.0.zip
